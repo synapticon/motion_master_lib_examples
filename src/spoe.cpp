@@ -18,13 +18,13 @@ int main() {
   auto connected = device.connect();
   LOG_F(INFO, "done.");
 
-  LOG_F(INFO, "Setting device state to OPERATIONAL (8)");
-  device.setState(8);
-  LOG_F(INFO, "done.");
-
   // Check if the socket is now connected
   assert(connected == true);
   assert(device.isConnected() == true);
+
+  LOG_F(INFO, "Setting device state to OPERATIONAL (8)");
+  device.setState(8);
+  LOG_F(INFO, "done.");
 
   LOG_F(INFO, "Getting state...");
   auto state = device.getState();
