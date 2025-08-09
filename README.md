@@ -2,8 +2,8 @@
 
 This repository provides usage examples for the **Motion Master** static C++ libraries. Included are:
 
-- The **SPoE** library, which implements a custom protocol for communicating with Synapticon SOMANET Integro devices over Ethernet.
 - The **SOEM** library for communicating with Synapticon SOMANET devices via EtherCAT.
+- The **SPoE** library, which implements a custom protocol for communicating with Synapticon SOMANET Integro devices over Ethernet.
 
 For full documentation on the Motion Master libraries, please visit our [official documentation](https://synapticon.github.io/motion_master/).
 
@@ -36,16 +36,16 @@ To temporarily enable `cl.exe` in your PowerShell 7 (x64) session, follow these 
 
 1. **Clone the repository with all submodules:**
 
-```powershell
-git clone --recursive https://github.com/synapticon/motion_master_lib_examples.git
-cd motion_master_lib_examples
-```
+   ```powershell
+   git clone --recursive https://github.com/synapticon/motion_master_lib_examples.git
+   cd motion_master_lib_examples
+   ```
 
 2. **Build the Debug version:**
 
-```powershell
-cmake --preset x64-windows-debug
-cmake --build --preset x64-windows-debug --parallel
-```
+   ```powershell
+   cmake --preset x64-windows-debug
+   cmake --build --preset x64-windows-debug --parallel
+   ```
 
 The compiled executables will be located in: `build/x64-windows-debug/`
