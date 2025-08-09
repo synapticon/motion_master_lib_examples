@@ -64,3 +64,4 @@
 
 # Do NOT ignore *.lib and *.a files in the /lib/ directory at repo root
 !lib/*.lib
+!lib/*.a
