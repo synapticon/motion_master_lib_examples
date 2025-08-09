@@ -39,3 +39,24 @@
 
 # debug information files
 *.dwo
+
+# Ignore vcpkg installed packages folder
+/vcpkg_installed/
+/installed/
+/packages/
+
+# Ignore common build folders
+/build/
+/out/
+/bin/
+/Debug/
+/Release/
+
+# Ignore generated files
+*.pdb
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
