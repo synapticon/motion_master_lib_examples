@@ -3,11 +3,6 @@
 # Specify the minimum required CMake version to ensure compatibility
 cmake_minimum_required(VERSION 3.28)
 
-# Set CMP0167 to OLD to retain support for the legacy FindBoost module.
-# This suppresses warnings introduced in CMake 3.29+ where FindBoost was removed.
-# Required for compatibility with vcpkg's current Boost wrapper which still uses _find_package(Boost).
-cmake_policy(SET CMP0167 OLD)
-
 # Define the Windows API target version as Windows 10/11 (0x0A00)
 # Enables use of Windows 10+ specific features and APIs
 if(WIN32)

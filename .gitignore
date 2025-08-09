@@ -41,7 +41,6 @@
 *.dwo
 
 # Ignore vcpkg installed packages folder
-/vcpkg/
 /vcpkg_installed/
 /installed/
 /packages/
