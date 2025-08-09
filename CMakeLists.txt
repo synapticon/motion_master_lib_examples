@@ -15,7 +15,7 @@ if(WIN32)
 endif()
 
 # Declare the project and specify that it uses C++
-project(MotionMasterLibExamples LANGUAGES CXX)
+project(MotionMasterLibExamples LANGUAGES C CXX)
 
 # Set C++ standard to C++20 and make it required
 set(CMAKE_CXX_STANDARD 20)

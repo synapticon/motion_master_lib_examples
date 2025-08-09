@@ -1,0 +1,6 @@
+# .clang-format
+BasedOnStyle: Google
+IndentWidth: 2
+MaxEmptyLinesToKeep: 1
+UseTab: Never
+ColumnLimit: 80
