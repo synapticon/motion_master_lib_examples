@@ -7,13 +7,22 @@ This repository provides usage examples for the **Motion Master** static C++ lib
 
 For full documentation on the Motion Master libraries, please visit our [official documentation](https://synapticon.github.io/motion_master/).
 
-## Building on Windows 11
+## Building
+
+Clone the repository with all submodules:
+
+```shell
+git clone --recursive https://github.com/synapticon/motion_master_lib_examples.git
+cd motion_master_lib_examples
+```
+
+### Building on Windows 11
 
 **Required Software:**
 
 - [Git](https://git-scm.com/)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 - [CMake](https://cmake.org/)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 
 To temporarily enable `cl.exe` in your PowerShell 7 (x64) session, follow these steps:
 
@@ -32,20 +41,29 @@ To temporarily enable `cl.exe` in your PowerShell 7 (x64) session, follow these 
 
 > ℹ️ The previous steps are necessary because the Developer Command Prompt for VS 2022 may default to the 32-bit toolset, causing linker failures in 64-bit builds. You can verify this by running `cl` and checking if the output includes **for x86**.
 
-### Build Instructions
+**Compilation:**
 
-1. **Clone the repository with all submodules:**
-
-   ```powershell
-   git clone --recursive https://github.com/synapticon/motion_master_lib_examples.git
-   cd motion_master_lib_examples
-   ```
-
-2. **Build the Debug version:**
-
-   ```powershell
-   cmake --preset x64-windows-debug
-   cmake --build --preset x64-windows-debug --parallel
-   ```
+```pwsh
+cmake --preset x64-windows-debug
+cmake --build --preset x64-windows-debug --parallel
+```
 
 The compiled executables will be located in: `build/x64-windows-debug/`
+
+### Building on Linux
+
+**Required Software:**
+
+- [Git](https://git-scm.com/)
+- [CMake](https://cmake.org/)
+- [GCC](https://gcc.gnu.org/)
+- [Ninja](https://ninja-build.org/)
+
+**Compilation:**
+
+```bash
+cmake --preset x64-linux-debug
+cmake --build --preset x64-linux-debug --parallel
+```
+
+The compiled executables will be located in: `build/x64-linux-debug/`
