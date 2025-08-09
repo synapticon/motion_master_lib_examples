@@ -2,7 +2,7 @@
 
 This repository provides usage examples for the **Motion Master** static C++ libraries. Included are:
 
-- The **SPoE** library, which implements a custom protocol for communicating with Synapticon SOMANET devices over Ethernet.
+- The **SPoE** library, which implements a custom protocol for communicating with Synapticon SOMANET Integro devices over Ethernet.
 - The **SOEM** library for communicating with Synapticon SOMANET devices via EtherCAT.
 
 For full documentation on the Motion Master libraries, please visit our [official documentation](https://synapticon.github.io/motion_master/).
