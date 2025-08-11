@@ -16,13 +16,15 @@ git clone --recursive https://github.com/synapticon/motion_master_lib_examples.g
 cd motion_master_lib_examples
 ```
 
+### Required Software
+
+- [Git](https://git-scm.com/) – Version control system
+- [CMake](https://cmake.org/) – Build system generator
+- [Ninja](https://ninja-build.org/) – Fast build tool
+- [GCC](https://gcc.gnu.org/) – Compiler toolchain for Linux
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) – Compiler and IDE for Windows 11
+
 ### Building on Windows 11
-
-**Required Software:**
-
-- [Git](https://git-scm.com/)
-- [CMake](https://cmake.org/)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 
 To temporarily enable `cl.exe` in your PowerShell 7 (x64) session, follow these steps:
 
@@ -41,29 +43,29 @@ To temporarily enable `cl.exe` in your PowerShell 7 (x64) session, follow these 
 
 > ℹ️ The previous steps are necessary because the Developer Command Prompt for VS 2022 may default to the 32-bit toolset, causing linker failures in 64-bit builds. You can verify this by running `cl` and checking if the output includes **for x86**.
 
-**Compilation:**
+**To compile:**
 
 ```pwsh
 cmake --preset x64-windows-debug
 cmake --build --preset x64-windows-debug --parallel
 ```
 
-The compiled executables will be located in: `build/x64-windows-debug/`
+The compiled executables will be located in: `./build/x64-windows-debug/`
 
 ### Building on Linux
 
-**Required Software:**
+First, install the required build tools:
 
-- [Git](https://git-scm.com/)
-- [CMake](https://cmake.org/)
-- [GCC](https://gcc.gnu.org/)
-- [Ninja](https://ninja-build.org/)
+```bash
+sudo apt update
+sudo apt install -y git cmake ninja-build build-essential
+```
 
-**Compilation:**
+**To compile:**
 
 ```bash
 cmake --preset x64-linux-debug
 cmake --build --preset x64-linux-debug --parallel
 ```
 
-The compiled executables will be located in: `build/x64-linux-debug/`
+The compiled executables will be located in: `./build/x64-linux-debug/`
